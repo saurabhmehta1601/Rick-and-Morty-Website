@@ -6,8 +6,8 @@ module.exports = {
   testMatch: ["**/*.(test|spec).(ts|tsx)"],
   globals: {
     "ts-jest": {
-      useBabelrc: true,
-      tsConfigFile: "tsconfig.json",
+      babelConfig: true,
+      tsconfig: "tsconfig.json",
     },
   },
   coveragePathIgnorePatterns: ["/node_modules/", "enzyme.js"],
