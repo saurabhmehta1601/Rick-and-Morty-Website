@@ -9,4 +9,8 @@ describe("<Index/>", () => {
   it("renders without crashing",()=>{
     expect(wrapper.find('[data-testid="heading"]').text()).toBe("Welcome to Nextjs")
   })
+
+  it("matches given string",()=>{
+    expect("This is test").toMatch(/test/)
+  })
 });
