@@ -1,6 +1,6 @@
-import * as React from 'react'
+import React from 'react'
 
- const Index : React.FC =() => {
+ export default function Index() : JSX.Element {
   return (
     <div>
       <p 
@@ -11,5 +11,3 @@ import * as React from 'react'
     </div>
   );
 }
-
-export default Index
