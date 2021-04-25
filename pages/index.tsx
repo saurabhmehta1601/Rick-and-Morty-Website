@@ -3,7 +3,9 @@ import * as React from 'react'
  const Index : React.FC =() => {
   return (
     <div>
-      <p className="text-4xl text-center ">
+      <p 
+      className="text-4xl text-center "
+      data-testid="heading">
         Welcome to <span className="text-blue-600">Nextjs</span>
       </p>
     </div>
