@@ -33,5 +33,5 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/Card.jsx"  ]
+, "components/Card.jsx", "pages/index.jsx"  ]
 }

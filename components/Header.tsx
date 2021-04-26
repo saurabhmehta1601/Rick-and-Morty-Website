@@ -3,7 +3,7 @@ import Image from "next/image"
 
 
 export default function Header(){
-    return (<div className=" bg-gray-800 flex items-center px-8  py-4">
+    return (<header className=" bg-gray-800 flex items-center px-8  py-4">
     
       <div className=""
       data-testid="site-logo">
@@ -18,5 +18,5 @@ export default function Header(){
           Rick And Morty
       </div>
 
-    </div>)
+    </header>)
 }
