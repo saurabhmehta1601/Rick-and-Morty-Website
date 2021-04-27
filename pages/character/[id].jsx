@@ -1,17 +1,14 @@
 import axios from 'axios'
 import * as React from 'react'
 import CharacterCard from '../../components/CharacterCard'
-import Head from 'next/head'
 
 export default function Character({character}){
+    React.useEffect(()=>{
+        document.title= `${character.name} | Rick And Morty`
+    },[])
     return <>
-    <Head>
-        <title>{character.name} | Rick And Morty</title>
-    </Head>
     <CharacterCard character={character} />
     </>
-        
-   
 }
 
 

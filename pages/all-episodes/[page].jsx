@@ -4,22 +4,22 @@ import Grid from "../../components/Grid"
 import axios from 'axios'
 import NavBtns from "../../components/NavBtns"
 
-export default function Characters ({data,pageNumber}){
+export default function Episode ({data,pageNumber}){
     return <>
     <Head>
-        <title>Characters | Rick And Morty</title>
+        <title>Episodes | Rick And Morty</title>
     </Head>
     <main className="my-4 container relative">
-        <p className="text-right text-lg ">Total characters : {data.info.count} </p>
+        <p className="text-right text-lg ">Total Episodes : {data.info.count} </p>
     <div className="mt-12">
     </div>
-        <Grid data={data}  type="character" />
+        <Grid data={data} type="episode"  />
 
    <NavBtns
-   noNextPage={pageNumber >=34 }
+   noNextPage={pageNumber >=3 }
    noPrevPage={pageNumber <=1} 
-   nextPageLink={`/all-characters/${pageNumber+1}`} 
-   prevPageLink={`/all-characters/${pageNumber-1}`}
+   nextPageLink={`/all-episodes/${pageNumber+1}`} 
+   prevPageLink={`/all-episodes/${pageNumber-1}`}
    />  
     </main>
     </>
@@ -28,7 +28,7 @@ export default function Characters ({data,pageNumber}){
 
 export async function getServerSideProps(context){
      const pageNumber =  context.params.page || 1
-     const res = await axios.get(`https://rickandmortyapi.com/api/character?page=${pageNumber}`)
+     const res = await axios.get(`https://rickandmortyapi.com/api/episode?page=${pageNumber}`)
 
      return {
          props:{ data : res.data ,pageNumber:parseInt(pageNumber)}
