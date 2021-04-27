@@ -1,9 +1,12 @@
 import * as React from 'react'
+import Link from "next/link"
 
-function GridItem({name}) {
+function GridItem({id,name}) {
     return (
-        <div className="bg-blue-600 w-1/12 text-center p-2 text-xl text-white mx-4 my-2 rounded">
-            {name}
+        <div className="bg-blue-600  text-center px-2 py-1 text-xl text-white mx-4 my-2 rounded">
+            <Link href={`/charcter/${id}`}>
+             {name}
+            </Link>
         </div>
     )
 }

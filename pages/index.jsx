@@ -1,5 +1,4 @@
 import * as React from 'react'
-import Header from "../components/Header"
 import Card from "../components/Card"
 import Head from "next/head"
 
@@ -11,7 +10,7 @@ import Head from "next/head"
       </Head>
 
       <main className="w-9/12 mx-auto flex mt-32 container justify-around flex-wrap">
-    <Card title="Characters" to="/characters"></Card>
+    <Card title="Characters" to="/all-characters/1"></Card>
     <Card title="Locations" to="/locations"></Card>
     <Card title="Episodes" to="/episodes"></Card>
       </main>
