@@ -12,22 +12,10 @@ export default function Character({episode}){
 }
 
 
-export async function getStaticProps({params}){
+export async function getServerSideProps({params}){
 
     const res = await axios.get(`https://rickandmortyapi.com/api/episode/${params.id}`)
     return {
         props:{ episode : res.data }
-    }
-}
-
-export function getStaticPaths(){
-    const paths = Array.from(Array(41),(elem,index)=>{
-        return {
-            params :{ id : toString(index + 1)}
-        }
-    })
-    return {
-        paths,
-        fallback:true
     }
 }

@@ -12,7 +12,7 @@ export default function Location({location}){
 }
 
 
-export async function getStaticProps({params}){
+export async function getServerSideProps({params}){
 
     const res = await axios.get(`https://rickandmortyapi.com/api/location/${params.id}`)
     return {
@@ -20,14 +20,3 @@ export async function getStaticProps({params}){
     }
 }
 
-export function getStaticPaths(){
-    const paths = Array.from(Array(108),(elem,index)=>{
-        return {
-            params :{ id : toString(index + 1)}
-        }
-    })
-    return {
-        paths,
-        fallback:true
-    }
-}
