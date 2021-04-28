@@ -3,7 +3,7 @@ import * as React from 'react'
 export  default function CharacterCard({character}){
 return <>
 <div className="text-3xl mt-6 text-center">Character</div>
-<div className="shadow-2xl rounded-lg mx-auto w-10/12 bg-gray-100 mt-4">
+<div className="shadow-2xl rounded-lg mx-auto w-10/12 bg-gray-100  mt-16 mb-24">
    
     <div className="mt-4 flex">
         <div >
